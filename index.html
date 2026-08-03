@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
-
-  <body>
-    <h1>Welcome to Fruitger AeroOS </h1>
-
-  <p>Woah this is a coolio websitio!</p>
-   #in between here and the other body is  what it is in the website
-   <img src="./dumpayy.jpg" />
-   <a href="https://www.youtube.com/">label</a>
-   <canvas id="Canvoo" width="400" height="400" style="border:1px solid #059000;">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Fredoka One';font-size: 22px;
+    height: 150vh; 
+    background-image:url(./deepee.png); 
+    background-size: 
+    cover;
+    background-repeat:
+    no-repeat;
+    margin @px;"
+} 
+</style>
+</head>
   </body>
+<div style="position: absolute; top: -45%; left: 50%; transform: translate(-50%, 50%); "style = "border: solid; width: 760px; border-radius: 16px" style="padding: 10px;" style="position: absolute;">
+    <h1>Welcome to Fruitger AeroOS </h1>
+  <p>Woah this is a coolio websitio!</p>
+   <h2>Have some fun :)</p>
+    <b>Don't be scared to be BOLD</p>
+   <a href="https://www.youtube.com/">Youtube</a>
+   <p style ="color: blue"> This text is drowning!</p>
+   <img src="./UFO333.gif" />
+   </div>
 
+   
+  <div
+    style="position: absolute; width: 99%; display: flex; backdrop-filter: blur(1000px); background-color: rgba(0, 0, 0, 0.08); color: #fff; justify-content: space-between; gap: 64px; border-radius: 10000000000000000px;">
+        <p style="margin-left: 16px; font-weight: 100; background-color: rgba(256, 256, 256, 0.2); padding: 4px 12px; border-radius: 16px;">
+            AeroOS
+        </p>
+
+        <p id="timeElement"
+          style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.2); padding: 4px 12px; border-radius: 16px;">
+            2026-08-03
+        </p>
+  </div>
+
+  <script>
+  function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+    }
+    setInterval(updateTime, 1000);
+  </script>
+  </body>
 </html>
