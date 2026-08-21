@@ -1,51 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
-<style>
-body {
-    font-family: 'Fredoka One';font-size: 22px;
-    height: 150vh; 
-    background-image:url(./deepee.png); 
-    background-size: 
-    cover;
-    background-repeat:
-    no-repeat;
-    margin @px;"
-} 
-</style>
-</head>
-  </body>
-<div style="position: absolute; top: -45%; left: 50%; transform: translate(-50%, 50%); "style = "border: solid; width: 760px; border-radius: 16px" style="padding: 10px;" style="position: absolute;">
-    <h1>Welcome to Fruitger AeroOS </h1>
-  <p>Woah this is a coolio websitio!</p>
-   <h2>Have some fun :)</p>
-    <b>Don't be scared to be BOLD</p>
-   <a href="https://www.youtube.com/">Youtube</a>
-   <p style ="color: blue"> This text is drowning!</p>
-   <img src="./UFO333.gif" />
-   </div>
 
-   
-  <div
-    style="position: absolute; width: 99%; display: flex; backdrop-filter: blur(1000px); background-color: rgba(0, 0, 0, 0.08); color: #fff; justify-content: space-between; gap: 64px; border-radius: 10000000000000000px;">
-        <p style="margin-left: 16px; font-weight: 100; background-color: rgba(256, 256, 256, 0.2); padding: 4px 12px; border-radius: 16px;">
-            AeroOS
+  <body
+    style="
+      font-family:
+        'Times New Roman', Times, serif,
+        system-ui,
+        sans-serif;
+      height: 100vh;
+      background-image: url(./deepee.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0px;
+    ">
+    <div
+      class="window"
+      id="welcome"
+      style="top: calc(50% - 90px); left: calc(50% - 180px)">
+      <div class="windowheader" id="welcomeheader">
+        <div class="closebutton" id="welcomeclose"></div>
+
+        <p class="headertext">AeroOS</p>
+        <div style="width: 16px; margin-right: 6x; height: 16px"></div>
+      </div>
+      <div
+        style="
+          background-color: #fff;
+          margin: 12px;
+          border-radius: 22px;
+          width: 360px;
+          padding: 16px;
+        ">
+        <img
+          src="deepe.jpg"
+          style="
+            width: 128px;
+            height: 76px;
+            border-radius: 32px;
+            object-fit: cover;
+          " />
+        <h1 style="margin: 4px">AeroOS</h1>
+        <p style="margin: 0px">
+          Welcome To AeroOS, enjoy your stay
         </p>
+      </div>
+    </div>
 
-        <p id="timeElement"
-          style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.2); padding: 4px 12px; border-radius: 16px;">
-            2026-08-03
-        </p>
-  </div>
+    <div
+      id="top"
+      style="
+        position: absolute;
+        width: 100%;
+        display: flex;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.125);
+        color: #fff;
+        justify-content: space-between;
+        gap: 32px;
+      ">
+      <p
+        id="welcomeopen"
+        style="
+          margin-left: 16px;
+          font-weight: 500;
+          background-color: rgba(180, 180, 180, 0.25);
+          padding: 4px 12px;
+          border-radius: 16px;
+          cursor: pointer;
+        ">
+        AeroOS
+      </p>
+      <p
+        id="timeElement"
+        style="
+          margin-right: 16px;
+          background-color: rgba(180, 180, 180, 0.25);
+          padding: 4px 12px;
+          border-radius: 16px;
+        "></p>
+    </div>
 
-  <script>
-  function updateTime() {
-        var currentTime = new Date().toLocaleString();
-        var timeText = document.querySelector("#timeElement");
-        timeText.innerHTML = currentTime;
-    }
-    setInterval(updateTime, 1000);
-  </script>
+    <div id="desktopApps" style="padding-top: 64px; padding-left: 16px">
+      <div
+        id="notesIcon"
+        style="
+          text-align: center;
+          padding: 16px;
+          filter: drop-shadow(0 0 8px black);
+          width: fit-content;
+          cursor: pointer;
+        ">
+        <img
+          src="./notebook.jpg"
+          style="width: 64px; height: 64px; border-radius: 16px" />
+        <p style="margin: 0px; color: #fff">Notes</p>
+      </div>
+      <div
+        id="photoIcon"
+        style="
+          text-align: center;
+          margin: 8px;
+          padding: 8px;
+          filter: drop-shadow(0 0 8px black);
+          width: fit-content;
+          cursor: pointer;
+        ">
+        
+    </div>
+
+    <div
+      class="window"
+      id="notes"
+      style="top: calc(50% - 240px); display: none; left: calc(50% - 260px)">
+      <div class="windowheader" id="notesheader">
+        <div class="closebutton" id="notesclose"></div>
+
+        <p class="headertext">Notes</p>
+        <div style="width: 16px; margin-right: 6x; height: 16px"></div>
+      </div>
+      <div
+        style="
+          background-color: #fff;
+          margin: 6px;
+          border-radius: 12px;
+          width: 500px;
+          height: 500px;
+          padding: 16px;
+          font-family: 'Times New Roman', Times, serif;
+          display: flex;
+        ">
+        <div
+          id="sidebar"
+          style="
+            background-color: #f9f9f9;
+            width: 500px;
+            margin-right: 16px;
+            padding: 16px;
+            border-radius: 16px;
+          "></div>
+
+        <div id="notesContent" style="overflow-y: scroll"></div>
+      </div>
+    </div>
+
+    <div
+      class="window"
+      id="photo"
+      style="top: calc(50% - 90px); left: calc(50% - 180px); display: none">
+      <div class="windowheader" id="photoheader">
+        <div class="closebutton" id="photoclose"></div>
+
+        <p class="headertext">Gallery</p>
+        <div style="width: 16px; margin-right: 6x; height: 16px"></div>
+      </div>
+      <div
+        style="
+          background-color: #fff;
+          margin: 6px;
+          border-radius: 12px;
+          width: 360px;
+          padding: 16px;
+        ">
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 </html>
