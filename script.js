@@ -154,7 +154,7 @@ var content = [
       `
   },
   {
-    title: 'Your Writing Corner',
+    title: 'Your Personal Notepad!',
     date: '2026-08-21',
     content: `
               <p contenteditable="True">
@@ -198,3 +198,28 @@ function addToSideBar(index) {
 for (let i = 0; i < content.length; i++) {
   addToSideBar(i)
 }
+var Pics = [
+  "./a1.jpg",
+  "./a2.jpg"
+]
+var picsIndex = 0;
+
+function showImage(index) {
+  var Pic = document.querySelector("#Pic");
+  Pic.src = Pics[index];
+}
+
+showPics(picsIndex)
+
+var Prev = document.querySelector("#Prev");
+var Next = document.querySelector("#Next");
+
+Prev.addEventListener("click", +function(){} ); {
+picsIndex = (picsIndex - 1 + Pics.length) % Pics.length;
+showPics(picsIndex);
+}
+Next.addEventListener("click", +function(){}); {
+picsIndex = (picsIndex + 1 )% Pics.length;
+showPics(picsIndex);
+}
+
